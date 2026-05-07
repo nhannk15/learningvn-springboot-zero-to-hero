@@ -3339,3 +3339,23 @@ java.util.NoSuchElementException: No value present
 2026-05-07T14:16:23.631+07:00  INFO 10280 --- [learningvn] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-05-07T14:16:23.632+07:00  INFO 10280 --- [learningvn] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-48 - Shutdown initiated...
 2026-05-07T14:16:23.635+07:00  INFO 10280 --- [learningvn] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-48 - Shutdown completed.
+2026-05-07T14:46:26.084+07:00  INFO 12608 --- [learningvn] [main] c.e.learningvn.LearningvnApplication     : Starting LearningvnApplication using Java 25.0.1 with PID 12608 (D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes started by nhann in D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn)
+2026-05-07T14:46:26.091+07:00  INFO 12608 --- [learningvn] [main] c.e.learningvn.LearningvnApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-07T14:46:27.938+07:00  INFO 12608 --- [learningvn] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-07T14:46:28.023+07:00  INFO 12608 --- [learningvn] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
+2026-05-07T14:46:30.176+07:00  INFO 12608 --- [learningvn] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: AotMetamodel]
+2026-05-07T14:46:30.266+07:00  INFO 12608 --- [learningvn] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-07T14:46:31.112+07:00  INFO 12608 --- [learningvn] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-07T14:46:31.163+07:00  INFO 12608 --- [learningvn] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [undefined/unknown]
+	Database driver: undefined/unknown
+	Database dialect: SpringDataJpaAotDialect
+	Database version: 0.0
+	Default catalog/schema: unknown/unknown
+	Autocommit mode: undefined/unknown
+	Isolation level: <unknown>
+	JDBC fetch size: undefined/unknown
+	Pool: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-07T14:46:32.347+07:00  INFO 12608 --- [learningvn] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
