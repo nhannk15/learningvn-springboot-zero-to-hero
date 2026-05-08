@@ -2,9 +2,11 @@ package com.example.learningvn.mapper;
 
 import java.util.List;
 
+import org.mapstruct.BeanMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
+import org.mapstruct.NullValuePropertyMappingStrategy;
 
 import com.example.learningvn.model.dto.ProductDTO;
 import com.example.learningvn.model.entity.Product;
@@ -18,6 +20,7 @@ public interface ProductMapper {
     @Mapping(target = "dateUpdated", ignore = true)
     Product toEntity(ProductDTO productDTO);
 
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "dateCreated", ignore = true)
     @Mapping(target = "dateUpdated", ignore = true)

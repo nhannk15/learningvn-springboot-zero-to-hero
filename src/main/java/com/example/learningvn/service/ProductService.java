@@ -5,11 +5,10 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.example.learningvn.model.dto.ProductDTO;
-import com.example.learningvn.model.entity.Product;
 
 @Service
 public interface ProductService {
-    ProductDTO createProduct(Product product);
+    ProductDTO createProduct(ProductDTO productDTO);
     ProductDTO getProductById(Long id);
     List<ProductDTO> getAllProducts();
     ProductDTO updateProduct(Long id, ProductDTO productDetails);

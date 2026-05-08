@@ -31,7 +31,7 @@ public class LearningvnApplication {
 
 	@EventListener
 	public void onApplicationEvent(WebServerInitializedEvent event) {
-		System.out.println("The application is running on " + event.getWebServer().getPort());
+		System.out.println("\n\n=============================The application is running on " + event.getWebServer().getPort() + "=============================\n\n");
 	}
 
 	@Bean

@@ -14,6 +14,7 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "products")
@@ -26,6 +27,7 @@ public class Product {
 
     @Column(name = "name", columnDefinition = "NVARCHAR(100)", nullable = false)
     @NotBlank(message = "Product name can't be left blank")
+    @Size(min = 5, max = 100, message = "Product Name must between 5 - 100 characters")
     private String name;
 
     @Column(name = "description", columnDefinition = "NVARCHAR(200)", nullable = false)
@@ -40,6 +42,8 @@ public class Product {
     private Integer quantity;
 
     @Column(name = "category", columnDefinition = "NVARCHAR(200)", nullable = false)
+    @NotBlank(message = "Product name can't be left blank")
+    @Size(min = 5, max = 100, message = "Product category must between 5 - 200 characters")
     private String category;
 
     @Column(name = "date_created")

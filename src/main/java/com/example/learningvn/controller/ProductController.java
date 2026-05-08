@@ -1,10 +1,14 @@
 package com.example.learningvn.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -19,6 +23,7 @@ import com.example.learningvn.model.dto.ProductDTO;
 import com.example.learningvn.model.entity.Product;
 import com.example.learningvn.service.ProductService;
 
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
@@ -34,7 +39,16 @@ public class ProductController {
     }
 
     @PostMapping
-    public ResponseEntity<ProductDTO> createProduct(@RequestBody Product productDetails) {
+    public ResponseEntity<?> createProduct(
+            @Valid @RequestBody ProductDTO productDetails,
+            BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            Map<String, String> errors = new HashMap<>();
+            for (FieldError error: bindingResult.getFieldErrors()) {
+                errors.put(error.getField(), error.getDefaultMessage());
+            }
+            return ResponseEntity.badRequest().body(errors);
+        }
         log.debug("Creating a new product...");
         ProductDTO createdProduct = productService.createProduct(productDetails);
 
@@ -83,15 +97,16 @@ public class ProductController {
     public ResponseEntity<List<ProductDTO>> getProductsByName(@RequestParam(name = "name") String name) {
         log.debug("Searching products by name...");
         List<ProductDTO> products = productService.searchProductsByName(name);
-        
+
         log.info("Successfully searched {} products by name: {}", products.size(), name);
         return ResponseEntity.ok(products);
     }
+
     @GetMapping("/category")
     public ResponseEntity<List<ProductDTO>> getProductsByCategory(@RequestParam(name = "name") String name) {
         log.debug("Searching products by category...");
         List<ProductDTO> products = productService.getProductsByCategory(name);
-        
+
         log.info("Successfully searched {} products by category: {}", products.size(), name);
         return ResponseEntity.ok(products);
     }
