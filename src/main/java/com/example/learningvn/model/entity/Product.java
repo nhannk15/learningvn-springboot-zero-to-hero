@@ -11,6 +11,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "products")
@@ -22,15 +25,18 @@ public class Product {
     private Long id;
 
     @Column(name = "name", columnDefinition = "NVARCHAR(100)", nullable = false)
+    @NotBlank(message = "Product name can't be left blank")
     private String name;
 
     @Column(name = "description", columnDefinition = "NVARCHAR(200)", nullable = false)
     private String description;
 
     @Column(name = "price", nullable = false)
+    @DecimalMin(value = "0.0", inclusive = false, message = "Price must be greater than 0")
     private BigDecimal price;
 
     @Column(name = "quantity", nullable = false)
+    @Min(value = 0, message = "Quantity must be greater than 0")
     private Integer quantity;
 
     @Column(name = "category", columnDefinition = "NVARCHAR(200)", nullable = false)
