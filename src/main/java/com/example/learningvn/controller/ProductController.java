@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.learningvn.model.dto.ProductDTO;
-import com.example.learningvn.model.entity.Product;
 import com.example.learningvn.service.ProductService;
 
 import jakarta.validation.Valid;
@@ -44,7 +43,7 @@ public class ProductController {
             BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             Map<String, String> errors = new HashMap<>();
-            for (FieldError error: bindingResult.getFieldErrors()) {
+            for (FieldError error : bindingResult.getFieldErrors()) {
                 errors.put(error.getField(), error.getDefaultMessage());
             }
             return ResponseEntity.badRequest().body(errors);
@@ -75,8 +74,9 @@ public class ProductController {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<ProductDTO> updateProduct(@PathVariable Long id,
-            @RequestBody ProductDTO productDetails) {
+    public ResponseEntity<ProductDTO> updateProduct(
+            @PathVariable Long id,
+            @Valid @RequestBody ProductDTO productDetails) {
         log.debug("Updating a product...");
         ProductDTO product = productService.updateProduct(id, productDetails);
 
