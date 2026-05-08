@@ -11,6 +11,11 @@ import lombok.extern.slf4j.Slf4j;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
     
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<String> handleException(Exception ex) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+    }
+
     @ExceptionHandler(StudentNotFoundException.class)
     public ResponseEntity<String> handleStudentNotFound(StudentNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
@@ -22,4 +27,8 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
 
+    @ExceptionHandler(ProductNotFoundException.class)
+    public ResponseEntity<String> handleProductNotFound(ProductNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
 }

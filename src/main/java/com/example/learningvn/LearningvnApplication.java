@@ -1,5 +1,8 @@
 package com.example.learningvn;
 
+import java.math.BigDecimal;
+
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.server.context.WebServerInitializedEvent;
@@ -8,6 +11,9 @@ import org.springframework.context.event.EventListener;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+
+import com.example.learningvn.model.entity.Product;
+import com.example.learningvn.repository.ProductRepository;
 
 @SpringBootApplication
 public class LearningvnApplication {
@@ -28,4 +34,30 @@ public class LearningvnApplication {
 		System.out.println("The application is running on " + event.getWebServer().getPort());
 	}
 
+	@Bean
+	CommandLineRunner initDatabase(ProductRepository repository) {
+		 return args -> {
+            repository.save(new Product(
+                null, 
+                "iPhone 15", 
+                "Điện thoại iPhone 15 128GB", 
+                new BigDecimal("24990000"), 
+                50, 
+                "Điện thoại", 
+                null, 
+                null
+            ));
+            
+            repository.save(new Product(
+                null, 
+                "MacBook Air M2", 
+                "Laptop Apple MacBook Air M2 2023", 
+                new BigDecimal("32990000"), 
+                30, 
+                "Laptop", 
+                null, 
+                null
+            ));
+        };
+    }
 }

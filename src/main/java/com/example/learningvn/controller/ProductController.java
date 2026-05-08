@@ -15,13 +15,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.learningvn.model.dto.ProductDTO;
 import com.example.learningvn.model.entity.Product;
 import com.example.learningvn.service.ProductService;
 
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping("/api/controller")
+@RequestMapping("/api/products")
 @Slf4j
 public class ProductController {
 
@@ -33,37 +34,37 @@ public class ProductController {
     }
 
     @PostMapping
-    public ResponseEntity<Product> createProduct(@RequestBody Product productDetails) {
+    public ResponseEntity<ProductDTO> createProduct(@RequestBody Product productDetails) {
         log.debug("Creating a new product...");
-        Product product = productService.createProduct(productDetails);
+        ProductDTO createdProduct = productService.createProduct(productDetails);
 
-        log.info("Successfully created a new product called: {}", product.getName());
-        return new ResponseEntity<>(product, HttpStatus.CREATED);
+        log.info("Successfully created a new product called: {}", createdProduct.getName());
+        return new ResponseEntity<>(createdProduct, HttpStatus.CREATED);
     }
 
     @GetMapping
-    public ResponseEntity<List<Product>> getAllProducts() {
+    public ResponseEntity<List<ProductDTO>> getAllProducts() {
         log.debug("Fetching all products...");
-        List<Product> products = productService.getAllProducts();
+        List<ProductDTO> products = productService.getAllProducts();
 
         log.info("Successfully fetched {} products", products.size());
         return ResponseEntity.ok(products);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Product> getProduct(@PathVariable Long id) {
+    public ResponseEntity<ProductDTO> getProduct(@PathVariable Long id) {
         log.debug("Fetching a product...");
-        Product product = productService.getProductById(id);
+        ProductDTO product = productService.getProductById(id);
 
         log.info("Successfully fetched a product called: {}", product.getName());
         return ResponseEntity.ok(product);
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<Product> updateProduct(@PathVariable Long id,
-            @RequestBody Product productDetails) {
+    public ResponseEntity<ProductDTO> updateProduct(@PathVariable Long id,
+            @RequestBody ProductDTO productDetails) {
         log.debug("Updating a product...");
-        Product product = productService.updateProduct(id, productDetails);
+        ProductDTO product = productService.updateProduct(id, productDetails);
 
         log.info("Successfully updated a product called: {}", product.getName());
         return ResponseEntity.ok(product);
@@ -79,17 +80,17 @@ public class ProductController {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<List<Product>> getProductsByName(@RequestParam(name = "name") String name) {
+    public ResponseEntity<List<ProductDTO>> getProductsByName(@RequestParam(name = "name") String name) {
         log.debug("Searching products by name...");
-        List<Product> products = productService.searchProductsByName(name);
+        List<ProductDTO> products = productService.searchProductsByName(name);
         
         log.info("Successfully searched {} products by name: {}", products.size(), name);
         return ResponseEntity.ok(products);
     }
     @GetMapping("/category")
-    public ResponseEntity<List<Product>> getProductsByCategory(@RequestParam(name = "name") String name) {
+    public ResponseEntity<List<ProductDTO>> getProductsByCategory(@RequestParam(name = "name") String name) {
         log.debug("Searching products by category...");
-        List<Product> products = productService.getProductsByCategory(name);
+        List<ProductDTO> products = productService.getProductsByCategory(name);
         
         log.info("Successfully searched {} products by category: {}", products.size(), name);
         return ResponseEntity.ok(products);

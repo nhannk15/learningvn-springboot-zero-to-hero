@@ -3,63 +3,70 @@ package com.example.learningvn.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import com.example.learningvn.exception.ProductNotFoundException;
+import com.example.learningvn.mapper.ProductMapper;
+import com.example.learningvn.model.dto.ProductDTO;
 import com.example.learningvn.model.entity.Product;
 import com.example.learningvn.repository.ProductRepository;
 
+@Service
 public class ProductServiceImpl implements ProductService {
 
-    
     private final ProductRepository productRepository;
+    public final ProductMapper productMapper;
 
     @Autowired
-    public ProductServiceImpl(ProductRepository productRepository) {
+    public ProductServiceImpl(ProductRepository productRepository, ProductMapper productMapper) {
         this.productRepository = productRepository;
+        this.productMapper = productMapper;
     }
 
     @Override
-    public Product createProduct(Product product) {
-        return productRepository.save(product);
+    public ProductDTO createProduct(Product product) {
+        productRepository.save(product);
+        return productMapper.toDTO(product);
     }
 
     @Override
-    public Product getProductById(Long id) {
-        return productRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
+    public ProductDTO getProductById(Long id) {
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new ProductNotFoundException("Product not found with id: " + id));
+        return productMapper.toDTO(product);
     }
 
     @Override
-    public List<Product> getAllProducts() {
-        return productRepository.findAll();
-    }
-
-    @Override
-    public Product updateProduct(Long id, Product productDetails) {
-        Product product = getProductById(id);
-
-        product.setName(productDetails.getName());
-        product.setDescription(productDetails.getDescription());
-        product.setPrice(productDetails.getPrice());
-        product.setQuantity(productDetails.getQuantity());
-        product.setCategory(productDetails.getCategory());
-
-        return productRepository.save(product);
+    public ProductDTO updateProduct(Long id, ProductDTO productDetails) {
+        Product existingProduct = productRepository.findById(id)
+                .orElseThrow(() -> new ProductNotFoundException("Product not found with id: " + id));
+        productMapper.updateProductFromDto(productDetails, existingProduct);
+        Product updateProduct = productRepository.save(existingProduct);
+        return productMapper.toDTO(updateProduct);
     }
 
     @Override
     public void deleteProduct(Long id) {
-        Product product = getProductById(id);
+        Product product = productRepository.findById(id).get();
         productRepository.delete(product);
     }
 
     @Override
-    public List<Product> searchProductsByName(String name) {
-        return productRepository.findByNameIgnoreCase(name);
+    public List<ProductDTO> searchProductsByName(String name) {
+        List<Product> products = productRepository.findByNameIgnoreCase(name);
+        return productMapper.toDTOList(products);
     }
 
     @Override
-    public List<Product> getProductsByCategory(String category) {
-        return productRepository.findByCategory(category);
+    public List<ProductDTO> getProductsByCategory(String category) {
+        List<Product> products = productRepository.findByCategory(category);
+        return productMapper.toDTOList(products);
+    }
+
+    @Override
+    public List<ProductDTO> getAllProducts() {
+        List<Product> products =  productRepository.findAll();
+        return productMapper.toDTOList(products);
     }
 
 }

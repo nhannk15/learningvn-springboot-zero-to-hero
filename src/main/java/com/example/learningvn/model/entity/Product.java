@@ -24,7 +24,7 @@ public class Product {
     @Column(name = "name", columnDefinition = "NVARCHAR(100)", nullable = false)
     private String name;
 
-    @Column(name = "desc", columnDefinition = "NVARCHAR(200)", nullable = false)
+    @Column(name = "description", columnDefinition = "NVARCHAR(200)", nullable = false)
     private String description;
 
     @Column(name = "price", nullable = false)
