@@ -88,6 +88,13 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- Spring Boot Starter Test đã bao gồm JUnit, Mockito, AssertJ -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 
 		<!-- Source: https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
 		<dependency>
