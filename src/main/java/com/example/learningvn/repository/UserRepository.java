@@ -9,7 +9,7 @@ import com.example.learningvn.model.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
+    //--- Query Methods.
     List<User> findByUsernameContaining(String username);
-
     User findByEmail(String email);
 }

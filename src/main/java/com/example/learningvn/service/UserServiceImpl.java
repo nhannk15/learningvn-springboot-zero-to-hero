@@ -61,6 +61,10 @@ public class UserServiceImpl implements UserService {
         log.debug("SERVICE: updating user with id: {}", id);
         User user = repository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("User not found with id: " + id));
+        if (repository.findByEmail(userDetails.getEmail()) != null) {
+            log.warn("SERVICE: email duplicated");
+            throw new UserEmailDuplicatedException("Duplicated email: " + userDetails.getEmail());
+        }
         log.debug("SERVICE: user found: {}", id);
         mapper.updateUserFromDto(userDetails, user);
         User updatedUser = repository.save(user);
