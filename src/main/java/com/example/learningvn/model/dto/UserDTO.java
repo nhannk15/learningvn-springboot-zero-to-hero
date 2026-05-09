@@ -1,6 +1,7 @@
 package com.example.learningvn.model.dto;
 
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 public class UserDTO {
@@ -9,6 +10,7 @@ public class UserDTO {
     private String username;
 
     @Email(message = "Email wrong format")
+    @NotBlank
     private String email;
 
     public UserDTO() {
