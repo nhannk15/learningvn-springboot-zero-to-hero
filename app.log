@@ -280,3 +280,649 @@
 2026-05-09T11:06:55.196+07:00  INFO 12768 --- [learningvn] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-05-09T11:06:55.202+07:00  INFO 12768 --- [learningvn] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-05-09T11:06:55.205+07:00  INFO 12768 --- [learningvn] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-09T12:22:04.959+07:00  INFO 100 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Starting LearningvnApplication using Java 25.0.1 with PID 100 (D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes started by nhann in D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn)
+2026-05-09T12:22:04.965+07:00  INFO 100 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-09T12:22:05.043+07:00  INFO 100 --- [learningvn] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-09T12:22:05.044+07:00  INFO 100 --- [learningvn] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-09T12:22:06.370+07:00  INFO 100 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-09T12:22:06.467+07:00  INFO 100 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+2026-05-09T12:22:07.400+07:00  INFO 100 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-09T12:22:07.430+07:00  INFO 100 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-09T12:22:07.431+07:00  INFO 100 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-09T12:22:07.520+07:00  INFO 100 --- [learningvn] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2475 ms
+2026-05-09T12:22:07.820+07:00  INFO 100 --- [learningvn] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-09T12:22:07.926+07:00  INFO 100 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-09T12:22:08.674+07:00  INFO 100 --- [learningvn] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-09T12:22:08.732+07:00  INFO 100 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-09T12:22:09.085+07:00  INFO 100 --- [learningvn] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:mydatabase user=SA
+2026-05-09T12:22:09.088+07:00  INFO 100 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-09T12:22:09.142+07:00  WARN 100 --- [learningvn] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-09T12:22:09.195+07:00  INFO 100 --- [learningvn] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:mydatabase]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: MYDATABASE/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-09T12:22:10.640+07:00  INFO 100 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-09T12:22:10.764+07:00  INFO 100 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:22:10.900+07:00  INFO 100 --- [learningvn] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-09T12:22:11.351+07:00  WARN 100 --- [learningvn] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-09T12:22:11.485+07:00  INFO 100 --- [learningvn] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-09T12:22:12.035+07:00  WARN 100 --- [learningvn] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-05-09T12:22:12.455+07:00  INFO 100 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-09T12:22:12.469+07:00  INFO 100 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Started LearningvnApplication in 8.233 seconds (process running for 9.463)
+2026-05-09T12:22:12.628+07:00  INFO 100 --- [learningvn] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-09T12:22:12.650+07:00 ERROR 100 --- [learningvn] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+jakarta.validation.ConstraintViolationException: Validation failed for classes [com.example.learningvn.model.entity.User] during persist time for groups [jakarta.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='Password length must be greater than 8', propertyPath=password, rootBeanClass=class com.example.learningvn.model.entity.User, messageTemplate='Password length must be greater than 8'}
+]
+	at org.hibernate.boot.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:153) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:77) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.preInsert(EntityIdentityInsertAction.java:195) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:73) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:667) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:270) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:371) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:285) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:215) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:133) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:144) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:90) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:74) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:50) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:692) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:675) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityHandlerInvocationHandler.invokeMethod(SharedEntityManagerCreator.java:240) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:386) ~[spring-orm-7.0.7.jar:7.0.7]
+	at jdk.proxy4/jdk.proxy4.$Proxy141.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:664) ~[spring-data-jpa-4.0.5.jar:4.0.5]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.0.5.jar:4.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.7.jar:7.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.7.jar:7.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.7.jar:7.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.7.jar:7.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:166) ~[spring-data-jpa-4.0.5.jar:4.0.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar:7.0.7]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.7.jar:7.0.7]
+	at jdk.proxy4/jdk.proxy4.$Proxy163.save(Unknown Source) ~[na:na]
+	at com.example.learningvn.LearningvnApplication.lambda$initDatabase$0(LearningvnApplication.java:44) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$1(SpringApplication.java:792) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82) ~[spring-core-7.0.7.jar:7.0.7]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-7.0.7.jar:7.0.7]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86) ~[spring-core-7.0.7.jar:7.0.7]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$0(SpringApplication.java:776) ~[spring-boot-4.0.6.jar:4.0.6]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:186) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:571) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:153) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:176) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:632) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:776) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:328) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.example.learningvn.LearningvnApplication.main(LearningvnApplication.java:32) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.6.jar:4.0.6]
+
+2026-05-09T12:22:12.666+07:00  INFO 100 --- [learningvn] [restartedMain] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09T12:22:12.697+07:00  INFO 100 --- [learningvn] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-09T12:22:12.704+07:00  INFO 100 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:22:12.713+07:00  WARN 100 --- [learningvn] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-09T12:22:12.714+07:00  INFO 100 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-09T12:22:12.717+07:00  INFO 100 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-09T12:25:04.233+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Starting LearningvnApplication using Java 25.0.1 with PID 3424 (D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes started by nhann in D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn)
+2026-05-09T12:25:04.238+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-09T12:25:04.321+07:00  INFO 3424 --- [learningvn] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-09T12:25:04.321+07:00  INFO 3424 --- [learningvn] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-09T12:25:05.657+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-09T12:25:05.763+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
+2026-05-09T12:25:06.576+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-09T12:25:06.602+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-09T12:25:06.603+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-09T12:25:06.679+07:00  INFO 3424 --- [learningvn] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2357 ms
+2026-05-09T12:25:06.926+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-09T12:25:06.997+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-09T12:25:07.726+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-09T12:25:07.786+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-09T12:25:08.054+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:mydatabase user=SA
+2026-05-09T12:25:08.056+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-09T12:25:08.089+07:00  WARN 3424 --- [learningvn] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-09T12:25:08.126+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:mydatabase]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: MYDATABASE/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-09T12:25:09.384+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-09T12:25:09.518+07:00  INFO 3424 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:25:09.686+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-09T12:25:10.157+07:00  WARN 3424 --- [learningvn] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-09T12:25:10.295+07:00  INFO 3424 --- [learningvn] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-09T12:25:10.926+07:00  WARN 3424 --- [learningvn] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-05-09T12:25:11.574+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-09T12:25:11.590+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Started LearningvnApplication in 8.093 seconds (process running for 9.234)
+2026-05-09T12:25:11.774+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-09T12:25:11.775+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-09T12:25:27.512+07:00  INFO 3424 --- [learningvn] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-09T12:25:27.514+07:00  INFO 3424 --- [learningvn] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-09T12:25:27.518+07:00  INFO 3424 --- [learningvn] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-05-09T12:25:27.651+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-database for request '/h2-database'.]
+2026-05-09T12:25:27.857+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-05-09T12:25:51.553+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console for request '/h2-console'.]
+2026-05-09T12:25:51.651+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-05-09T12:26:09.516+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console for request '/h2-console'.]
+2026-05-09T12:26:09.588+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-05-09T12:27:58.009+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-cosole for request '/h2-cosole'.]
+2026-05-09T12:27:58.226+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-05-09T12:28:02.621+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console for request '/h2-console'.]
+2026-05-09T12:28:02.711+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-05-09T12:29:15.597+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console for request '/h2-console'.]
+2026-05-09T12:29:16.047+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-05-09T12:31:49.284+07:00  INFO 3424 --- [learningvn] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-09T12:31:49.294+07:00  INFO 3424 --- [learningvn] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09T12:31:49.322+07:00  INFO 3424 --- [learningvn] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-09T12:31:49.332+07:00  INFO 3424 --- [learningvn] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:31:49.345+07:00  WARN 3424 --- [learningvn] [Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-09T12:31:49.346+07:00  INFO 3424 --- [learningvn] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-09T12:31:49.349+07:00  INFO 3424 --- [learningvn] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-09T12:31:49.506+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Starting LearningvnApplication using Java 25.0.1 with PID 3424 (D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes started by nhann in D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn)
+2026-05-09T12:31:49.506+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-09T12:31:50.124+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-09T12:31:50.167+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2026-05-09T12:31:50.481+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-09T12:31:50.485+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-09T12:31:50.485+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-09T12:31:50.559+07:00  INFO 3424 --- [learningvn] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1044 ms
+2026-05-09T12:31:50.664+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-09T12:31:50.720+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-09T12:31:50.723+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-05-09T12:31:50.727+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:mydatabase user=SA
+2026-05-09T12:31:50.728+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-05-09T12:31:50.729+07:00  WARN 3424 --- [learningvn] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-09T12:31:50.730+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:mydatabase]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: MYDATABASE/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-09T12:31:50.902+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-09T12:31:50.914+07:00  INFO 3424 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:31:51.055+07:00  WARN 3424 --- [learningvn] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-09T12:31:51.108+07:00  INFO 3424 --- [learningvn] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-09T12:31:51.286+07:00  WARN 3424 --- [learningvn] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-05-09T12:31:51.415+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-09T12:31:51.420+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Started LearningvnApplication in 1.969 seconds (process running for 409.064)
+2026-05-09T12:31:51.437+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-09T12:31:51.437+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-09T12:31:51.439+07:00  INFO 3424 --- [learningvn] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-09T12:31:59.879+07:00  INFO 3424 --- [learningvn] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-09T12:31:59.882+07:00  INFO 3424 --- [learningvn] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09T12:31:59.904+07:00  INFO 3424 --- [learningvn] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-09T12:31:59.912+07:00  INFO 3424 --- [learningvn] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:31:59.915+07:00  WARN 3424 --- [learningvn] [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-09T12:31:59.916+07:00  INFO 3424 --- [learningvn] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-05-09T12:31:59.917+07:00  INFO 3424 --- [learningvn] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-05-09T12:32:00.052+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Starting LearningvnApplication using Java 25.0.1 with PID 3424 (D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes started by nhann in D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn)
+2026-05-09T12:32:00.052+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-09T12:32:00.538+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-09T12:32:00.574+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2026-05-09T12:32:00.736+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-09T12:32:00.737+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-09T12:32:00.738+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-09T12:32:00.779+07:00  INFO 3424 --- [learningvn] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 721 ms
+2026-05-09T12:32:00.831+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-09T12:32:00.872+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-09T12:32:00.873+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-05-09T12:32:00.876+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn20: url=jdbc:h2:mem:mydatabase user=SA
+2026-05-09T12:32:00.877+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-05-09T12:32:00.879+07:00  WARN 3424 --- [learningvn] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-09T12:32:00.881+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:mydatabase]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: MYDATABASE/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-09T12:32:01.006+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-09T12:32:01.017+07:00  INFO 3424 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:32:01.133+07:00  WARN 3424 --- [learningvn] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-09T12:32:01.175+07:00  INFO 3424 --- [learningvn] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-09T12:32:01.332+07:00  WARN 3424 --- [learningvn] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-05-09T12:32:01.434+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-09T12:32:01.440+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Started LearningvnApplication in 1.443 seconds (process running for 419.083)
+2026-05-09T12:32:01.455+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-09T12:32:01.455+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-09T12:32:01.456+07:00  INFO 3424 --- [learningvn] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-09T12:32:04.904+07:00  INFO 3424 --- [learningvn] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-09T12:32:04.906+07:00  INFO 3424 --- [learningvn] [Thread-10] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09T12:32:04.923+07:00  INFO 3424 --- [learningvn] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-09T12:32:04.926+07:00  INFO 3424 --- [learningvn] [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:32:04.928+07:00  WARN 3424 --- [learningvn] [Thread-10] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-09T12:32:04.929+07:00  INFO 3424 --- [learningvn] [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-05-09T12:32:04.930+07:00  INFO 3424 --- [learningvn] [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-05-09T12:32:05.037+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Starting LearningvnApplication using Java 25.0.1 with PID 3424 (D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes started by nhann in D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn)
+2026-05-09T12:32:05.037+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-09T12:32:05.335+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-09T12:32:05.360+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+2026-05-09T12:32:05.553+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-09T12:32:05.555+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-09T12:32:05.555+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-09T12:32:05.597+07:00  INFO 3424 --- [learningvn] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 557 ms
+2026-05-09T12:32:05.647+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-09T12:32:05.686+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-09T12:32:05.687+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-05-09T12:32:05.690+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:mydatabase user=SA
+2026-05-09T12:32:05.690+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-05-09T12:32:05.692+07:00  WARN 3424 --- [learningvn] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-09T12:32:05.693+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:mydatabase]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: MYDATABASE/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-09T12:32:05.823+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-09T12:32:05.833+07:00  INFO 3424 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:32:05.953+07:00  WARN 3424 --- [learningvn] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-09T12:32:05.994+07:00  INFO 3424 --- [learningvn] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-09T12:32:06.147+07:00  WARN 3424 --- [learningvn] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-05-09T12:32:06.238+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-09T12:32:06.242+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Started LearningvnApplication in 1.237 seconds (process running for 423.885)
+2026-05-09T12:32:06.255+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-09T12:32:06.255+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-09T12:32:06.257+07:00  INFO 3424 --- [learningvn] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-09T12:32:23.494+07:00  INFO 3424 --- [learningvn] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-09T12:32:23.495+07:00  INFO 3424 --- [learningvn] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-09T12:32:23.498+07:00  INFO 3424 --- [learningvn] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-05-09T12:32:23.514+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console for request '/h2-console/'.]
+2026-05-09T12:32:23.613+07:00  WARN 3424 --- [learningvn] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-05-09T12:36:19.525+07:00  INFO 3424 --- [learningvn] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-09T12:36:19.526+07:00  INFO 3424 --- [learningvn] [Thread-14] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09T12:36:19.548+07:00  INFO 3424 --- [learningvn] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-09T12:36:19.552+07:00  INFO 3424 --- [learningvn] [Thread-14] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:36:19.554+07:00  WARN 3424 --- [learningvn] [Thread-14] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-09T12:36:19.554+07:00  INFO 3424 --- [learningvn] [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-05-09T12:36:19.556+07:00  INFO 3424 --- [learningvn] [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-05-09T12:36:19.695+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Starting LearningvnApplication using Java 25.0.1 with PID 3424 (D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes started by nhann in D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn)
+2026-05-09T12:36:19.695+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-09T12:36:20.040+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-09T12:36:20.067+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2026-05-09T12:36:20.221+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-09T12:36:20.224+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-09T12:36:20.224+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-09T12:36:20.261+07:00  INFO 3424 --- [learningvn] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 561 ms
+2026-05-09T12:36:20.324+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-09T12:36:20.365+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-09T12:36:20.367+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-05-09T12:36:20.371+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection conn40: url=jdbc:h2:mem:mydatabase user=SA
+2026-05-09T12:36:20.371+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-05-09T12:36:20.372+07:00  WARN 3424 --- [learningvn] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-09T12:36:20.373+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:mydatabase]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: MYDATABASE/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-09T12:36:20.577+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-09T12:36:20.607+07:00  INFO 3424 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:36:20.766+07:00  WARN 3424 --- [learningvn] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-09T12:36:20.819+07:00  INFO 3424 --- [learningvn] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-09T12:36:20.999+07:00  WARN 3424 --- [learningvn] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-05-09T12:36:21.139+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-09T12:36:21.144+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Started LearningvnApplication in 1.493 seconds (process running for 678.787)
+2026-05-09T12:36:21.169+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-09T12:36:21.170+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-09T12:36:21.171+07:00  INFO 3424 --- [learningvn] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-09T12:37:27.080+07:00  INFO 3424 --- [learningvn] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-09T12:37:27.082+07:00  INFO 3424 --- [learningvn] [Thread-18] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09T12:37:27.109+07:00  INFO 3424 --- [learningvn] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-09T12:37:27.114+07:00  INFO 3424 --- [learningvn] [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:37:27.117+07:00  WARN 3424 --- [learningvn] [Thread-18] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-09T12:37:27.118+07:00  INFO 3424 --- [learningvn] [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-05-09T12:37:27.119+07:00  INFO 3424 --- [learningvn] [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-05-09T12:37:27.270+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Starting LearningvnApplication using Java 25.0.1 with PID 3424 (D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes started by nhann in D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn)
+2026-05-09T12:37:27.272+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-09T12:37:27.749+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-09T12:37:27.785+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2026-05-09T12:37:28.021+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-09T12:37:28.026+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-09T12:37:28.027+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-09T12:37:28.073+07:00  INFO 3424 --- [learningvn] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 797 ms
+2026-05-09T12:37:28.141+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-09T12:37:28.195+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-09T12:37:28.197+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-05-09T12:37:28.199+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection conn50: url=jdbc:h2:mem:mydatabase user=SA
+2026-05-09T12:37:28.200+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-05-09T12:37:28.201+07:00  WARN 3424 --- [learningvn] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-09T12:37:28.203+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:mydatabase]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: MYDATABASE/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-09T12:37:28.335+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-09T12:37:28.347+07:00  INFO 3424 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:37:28.503+07:00  WARN 3424 --- [learningvn] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-09T12:37:28.561+07:00  INFO 3424 --- [learningvn] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-09T12:37:28.750+07:00  WARN 3424 --- [learningvn] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-05-09T12:37:28.899+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-09T12:37:28.904+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Started LearningvnApplication in 1.679 seconds (process running for 746.547)
+2026-05-09T12:37:28.919+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-09T12:37:28.919+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-09T12:37:28.919+07:00  INFO 3424 --- [learningvn] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-09T12:37:51.468+07:00  INFO 3424 --- [learningvn] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 24 class path changes (0 additions, 24 deletions, 0 modifications)
+2026-05-09T12:37:51.471+07:00  INFO 3424 --- [learningvn] [Thread-22] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09T12:37:51.495+07:00  INFO 3424 --- [learningvn] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-09T12:37:51.499+07:00  INFO 3424 --- [learningvn] [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:37:51.503+07:00  WARN 3424 --- [learningvn] [Thread-22] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-09T12:37:51.504+07:00  INFO 3424 --- [learningvn] [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-05-09T12:37:51.507+07:00  INFO 3424 --- [learningvn] [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-05-09T12:37:56.740+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Starting LearningvnApplication using Java 25.0.1 with PID 3424 (D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes started by nhann in D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn)
+2026-05-09T12:37:56.741+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-09T12:37:57.423+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-09T12:37:57.453+07:00  INFO 3424 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2026-05-09T12:37:57.628+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-09T12:37:57.630+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-09T12:37:57.631+07:00  INFO 3424 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-09T12:37:57.677+07:00  INFO 3424 --- [learningvn] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 934 ms
+2026-05-09T12:37:57.730+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-09T12:37:57.778+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-09T12:37:57.780+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-05-09T12:37:57.783+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn67: url=jdbc:h2:mem:mydatabase user=SA
+2026-05-09T12:37:57.783+07:00  INFO 3424 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-05-09T12:37:57.784+07:00  WARN 3424 --- [learningvn] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-09T12:37:57.785+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:mydatabase]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: MYDATABASE/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-09T12:37:57.914+07:00  INFO 3424 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-09T12:37:57.926+07:00  INFO 3424 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:37:58.045+07:00  WARN 3424 --- [learningvn] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-09T12:37:58.084+07:00  INFO 3424 --- [learningvn] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-09T12:37:58.225+07:00  WARN 3424 --- [learningvn] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-05-09T12:37:58.331+07:00  INFO 3424 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-09T12:37:58.336+07:00  INFO 3424 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Started LearningvnApplication in 1.642 seconds (process running for 775.979)
+2026-05-09T12:37:58.351+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-09T12:37:58.352+07:00  WARN 3424 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-09T12:37:58.355+07:00  INFO 3424 --- [learningvn] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-09T12:40:15.209+07:00  INFO 3424 --- [learningvn] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09T12:40:15.228+07:00  INFO 3424 --- [learningvn] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-09T12:40:15.232+07:00  INFO 3424 --- [learningvn] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:40:15.234+07:00  WARN 3424 --- [learningvn] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-09T12:40:15.235+07:00  INFO 3424 --- [learningvn] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-05-09T12:40:15.236+07:00  INFO 3424 --- [learningvn] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2026-05-09T12:40:43.607+07:00  INFO 18428 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Starting LearningvnApplication using Java 25.0.1 with PID 18428 (D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes started by nhann in D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn)
+2026-05-09T12:40:43.612+07:00  INFO 18428 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-09T12:40:43.710+07:00  INFO 18428 --- [learningvn] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-09T12:40:43.711+07:00  INFO 18428 --- [learningvn] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-09T12:40:44.987+07:00  INFO 18428 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-09T12:40:45.071+07:00  INFO 18428 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+2026-05-09T12:40:46.039+07:00  INFO 18428 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-09T12:40:46.058+07:00  INFO 18428 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-09T12:40:46.060+07:00  INFO 18428 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-09T12:40:46.146+07:00  INFO 18428 --- [learningvn] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2434 ms
+2026-05-09T12:40:46.404+07:00  INFO 18428 --- [learningvn] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-09T12:40:46.477+07:00  INFO 18428 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-09T12:40:47.130+07:00  INFO 18428 --- [learningvn] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-09T12:40:47.177+07:00  INFO 18428 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-09T12:40:47.426+07:00  INFO 18428 --- [learningvn] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:mydatabase user=SA
+2026-05-09T12:40:47.428+07:00  INFO 18428 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-09T12:40:47.464+07:00  WARN 18428 --- [learningvn] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-09T12:40:47.503+07:00  INFO 18428 --- [learningvn] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:mydatabase]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: MYDATABASE/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-09T12:40:48.837+07:00  INFO 18428 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-09T12:40:48.948+07:00  INFO 18428 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:40:49.062+07:00  INFO 18428 --- [learningvn] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-09T12:40:49.270+07:00  WARN 18428 --- [learningvn] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productController' defined in file [D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes\com\example\learningvn\controller\ProductController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productServiceImpl' defined in file [D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes\com\example\learningvn\service\ProductServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'com.example.learningvn.mapper.ProductMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-05-09T12:40:49.271+07:00  INFO 18428 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:40:49.281+07:00  WARN 18428 --- [learningvn] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-09T12:40:49.283+07:00  INFO 18428 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-09T12:40:49.286+07:00  INFO 18428 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-09T12:40:49.291+07:00  INFO 18428 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-09T12:40:49.308+07:00  INFO 18428 --- [learningvn] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-09T12:40:49.339+07:00 ERROR 18428 --- [learningvn] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.example.learningvn.service.ProductServiceImpl required a bean of type 'com.example.learningvn.mapper.ProductMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.learningvn.mapper.ProductMapper' in your configuration.
+
+2026-05-09T12:46:55.712+07:00  INFO 13564 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Starting LearningvnApplication using Java 25.0.1 with PID 13564 (D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes started by nhann in D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn)
+2026-05-09T12:46:55.715+07:00  INFO 13564 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-09T12:46:55.778+07:00  INFO 13564 --- [learningvn] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-09T12:46:55.778+07:00  INFO 13564 --- [learningvn] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-09T12:46:56.872+07:00  INFO 13564 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-09T12:46:56.946+07:00  INFO 13564 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 3 JPA repository interfaces.
+2026-05-09T12:46:57.807+07:00  INFO 13564 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-09T12:46:57.827+07:00  INFO 13564 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-09T12:46:57.828+07:00  INFO 13564 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-09T12:46:57.895+07:00  INFO 13564 --- [learningvn] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2115 ms
+2026-05-09T12:46:58.128+07:00  INFO 13564 --- [learningvn] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-09T12:46:58.194+07:00  INFO 13564 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-09T12:46:58.779+07:00  INFO 13564 --- [learningvn] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-09T12:46:58.824+07:00  INFO 13564 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-09T12:46:59.076+07:00  INFO 13564 --- [learningvn] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:mydatabase user=SA
+2026-05-09T12:46:59.079+07:00  INFO 13564 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-09T12:46:59.117+07:00  WARN 13564 --- [learningvn] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-09T12:46:59.166+07:00  INFO 13564 --- [learningvn] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:mydatabase]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: MYDATABASE/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-09T12:47:00.414+07:00  INFO 13564 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-09T12:47:00.544+07:00  INFO 13564 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:47:00.653+07:00  INFO 13564 --- [learningvn] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-09T12:47:00.983+07:00  WARN 13564 --- [learningvn] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-09T12:47:01.102+07:00  INFO 13564 --- [learningvn] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-09T12:47:01.505+07:00  WARN 13564 --- [learningvn] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-05-09T12:47:01.840+07:00  INFO 13564 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-09T12:47:01.852+07:00  INFO 13564 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Started LearningvnApplication in 6.746 seconds (process running for 7.516)
+2026-05-09T12:47:02.395+07:00  WARN 13564 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-09T12:47:02.395+07:00  WARN 13564 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-09T12:47:14.600+07:00  INFO 13564 --- [learningvn] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-09T12:47:14.601+07:00  INFO 13564 --- [learningvn] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-09T12:47:14.604+07:00  INFO 13564 --- [learningvn] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-09T12:47:14.707+07:00  WARN 13564 --- [learningvn] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console for request '/h2-console'.]
+2026-05-09T12:47:14.842+07:00  WARN 13564 --- [learningvn] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-05-09T12:47:16.895+07:00  WARN 13564 --- [learningvn] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource h2-console for request '/h2-console'.]
+2026-05-09T12:47:16.973+07:00  WARN 13564 --- [learningvn] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-05-09T12:48:03.735+07:00  INFO 13564 --- [learningvn] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09T12:48:03.758+07:00  INFO 13564 --- [learningvn] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-09T12:48:03.765+07:00  INFO 13564 --- [learningvn] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:48:03.773+07:00  WARN 13564 --- [learningvn] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-09T12:48:03.774+07:00  INFO 13564 --- [learningvn] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-09T12:48:03.777+07:00  INFO 13564 --- [learningvn] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-09T12:52:08.043+07:00  INFO 12992 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Starting LearningvnApplication using Java 25.0.1 with PID 12992 (D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes started by nhann in D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn)
+2026-05-09T12:52:08.050+07:00  INFO 12992 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-09T12:52:08.135+07:00  INFO 12992 --- [learningvn] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-09T12:52:08.135+07:00  INFO 12992 --- [learningvn] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-09T12:52:09.335+07:00  INFO 12992 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-09T12:52:09.443+07:00  INFO 12992 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 3 JPA repository interfaces.
+2026-05-09T12:52:10.348+07:00  INFO 12992 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-09T12:52:10.366+07:00  INFO 12992 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-09T12:52:10.367+07:00  INFO 12992 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-09T12:52:10.455+07:00  INFO 12992 --- [learningvn] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2318 ms
+2026-05-09T12:52:10.702+07:00  INFO 12992 --- [learningvn] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-09T12:52:10.772+07:00  INFO 12992 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-09T12:52:11.433+07:00  INFO 12992 --- [learningvn] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-09T12:52:11.485+07:00  INFO 12992 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-09T12:52:11.782+07:00  INFO 12992 --- [learningvn] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:mydatabase user=SA
+2026-05-09T12:52:11.784+07:00  INFO 12992 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-09T12:52:11.821+07:00  WARN 12992 --- [learningvn] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-09T12:52:11.864+07:00  INFO 12992 --- [learningvn] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:mydatabase]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: MYDATABASE/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-09T12:52:13.220+07:00  INFO 12992 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-09T12:52:13.310+07:00  INFO 12992 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:52:13.468+07:00  INFO 12992 --- [learningvn] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-09T12:52:13.995+07:00  WARN 12992 --- [learningvn] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-09T12:52:14.141+07:00  INFO 12992 --- [learningvn] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-09T12:52:14.782+07:00  WARN 12992 --- [learningvn] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-05-09T12:52:15.205+07:00  INFO 12992 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-09T12:52:15.221+07:00  INFO 12992 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Started LearningvnApplication in 7.861 seconds (process running for 8.67)
+2026-05-09T12:52:15.911+07:00  WARN 12992 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-09T12:52:15.913+07:00  WARN 12992 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-09T12:53:09.896+07:00  INFO 12992 --- [learningvn] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-05-09T12:53:09.928+07:00  INFO 12992 --- [learningvn] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09T12:53:09.967+07:00  INFO 12992 --- [learningvn] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-09T12:53:09.974+07:00  INFO 12992 --- [learningvn] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:53:09.982+07:00  WARN 12992 --- [learningvn] [Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-09T12:53:09.983+07:00  INFO 12992 --- [learningvn] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-09T12:53:09.987+07:00  INFO 12992 --- [learningvn] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-09T12:53:10.115+07:00  INFO 12992 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Starting LearningvnApplication using Java 25.0.1 with PID 12992 (D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn\target\classes started by nhann in D:\NhanNKL_Studies\TiTV - Backend Programming with Spring\learningvn)
+2026-05-09T12:53:10.116+07:00  INFO 12992 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-05-09T12:53:10.480+07:00  INFO 12992 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-09T12:53:10.527+07:00  INFO 12992 --- [learningvn] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 3 JPA repository interfaces.
+2026-05-09T12:53:10.747+07:00  INFO 12992 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-09T12:53:10.750+07:00  INFO 12992 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-09T12:53:10.750+07:00  INFO 12992 --- [learningvn] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-09T12:53:10.797+07:00  INFO 12992 --- [learningvn] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 677 ms
+2026-05-09T12:53:10.865+07:00  INFO 12992 --- [learningvn] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-09T12:53:10.916+07:00  INFO 12992 --- [learningvn] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-09T12:53:10.919+07:00  INFO 12992 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-05-09T12:53:10.923+07:00  INFO 12992 --- [learningvn] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:mydatabase user=SA
+2026-05-09T12:53:10.924+07:00  INFO 12992 --- [learningvn] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-05-09T12:53:10.926+07:00  WARN 12992 --- [learningvn] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-09T12:53:10.926+07:00  INFO 12992 --- [learningvn] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:mydatabase]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: MYDATABASE/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-09T12:53:11.073+07:00  INFO 12992 --- [learningvn] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-09T12:53:11.084+07:00  INFO 12992 --- [learningvn] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:53:11.214+07:00  WARN 12992 --- [learningvn] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-09T12:53:11.268+07:00  INFO 12992 --- [learningvn] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-09T12:53:11.426+07:00  WARN 12992 --- [learningvn] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-05-09T12:53:11.534+07:00  INFO 12992 --- [learningvn] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-09T12:53:11.541+07:00  INFO 12992 --- [learningvn] [restartedMain] c.e.learningvn.LearningvnApplication     : Started LearningvnApplication in 1.465 seconds (process running for 64.99)
+2026-05-09T12:53:11.564+07:00  WARN 12992 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-05-09T12:53:11.565+07:00  WARN 12992 --- [learningvn] [restartedMain] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-05-09T12:53:11.567+07:00  INFO 12992 --- [learningvn] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-05-09T12:53:19.129+07:00  INFO 12992 --- [learningvn] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-09T12:53:19.149+07:00  INFO 12992 --- [learningvn] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-09T12:53:19.156+07:00  INFO 12992 --- [learningvn] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-09T12:53:19.160+07:00  WARN 12992 --- [learningvn] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-05-09T12:53:19.161+07:00  INFO 12992 --- [learningvn] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-05-09T12:53:19.162+07:00  INFO 12992 --- [learningvn] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
