@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.learningvn.exception.UserEmailDuplicatedException;
 import com.example.learningvn.exception.UserNotFoundException;
 import com.example.learningvn.mapper.UserMapper;
 import com.example.learningvn.model.dto.UserDTO;
@@ -29,6 +30,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDTO createUser(User userDetails) {
         log.debug("SERVICE: adding user: {}", userDetails.getUsername());
+        if (repository.findByEmail(userDetails.getEmail()) != null) {
+            log.warn("SERVICE: email duplicated");
+            throw new UserEmailDuplicatedException("Duplicated email: " + userDetails.getEmail());
+        }
         User createdUser = repository.save(userDetails);
         log.debug("SERVICE: successfully created user: {}", createdUser.getUsername());
         return mapper.toDTO(createdUser);

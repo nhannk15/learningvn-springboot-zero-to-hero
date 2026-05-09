@@ -26,7 +26,7 @@ public class User {
     @Size(min = 5, max = 100, message = "Username must be between 5 - 100 characters")
     private String username;
 
-    @Column(name = "email", columnDefinition = "VARCHAR(100)", nullable = false)
+    @Column(name = "email", columnDefinition = "VARCHAR(100)", nullable = false, unique = true)
     @Email(message = "Email wrong format")
     private String email;
 
