@@ -1,13 +1,11 @@
 package com.example.learningvn.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
+//import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
+//import org.springframework.data.domain.Sort;
 
 import org.springframework.stereotype.Service;
 
@@ -42,17 +40,7 @@ public class DogServiceImpl implements DogService {
     }
 
     @Override
-    public Page<DogDTO> getAllDogs(int page, int size, String sortBy, String direction) {
-        //--- Sort Object.
-        Sort sort = null;
-        if (direction.equals("desc")) {
-            sort = Sort.by(sortBy).descending();
-        } else {
-            sort = Sort.by(sortBy).ascending();
-        }
-
-        //--- Pageable with info.
-        Pageable pageable = PageRequest.of(page, size, sort);
+    public Page<DogDTO> getAllDogs(Pageable pageable) {
         log.debug("SERVICE: fetching all dogs");
         Page<Dog> dogs = repository.findAll(pageable);
         log.debug("SERVICE: successfully fetched all dogs");
@@ -61,11 +49,7 @@ public class DogServiceImpl implements DogService {
     }
 
     @Override
-    public Page<DogDTO> findDogsByName(String name, int page, int size) {
-
-        //--- Pageable with info
-        Pageable pageable = PageRequest.of(page, size);
-
+    public Page<DogDTO> findDogsByName(String name, Pageable pageable) {
         log.debug("SERVICE: fetching all dogs with name: {}", name);
         Page<Dog> dogs = repository.findByNameContainingIgnoreCase(name, pageable);
         log.debug("SERVICE: successfully fetched all dogs with name: {}", name);
@@ -73,9 +57,7 @@ public class DogServiceImpl implements DogService {
     }
 
     @Override
-    public Page<DogDTO> findDogsByColor(String color, int page, int size) {
-        //--- Pagebale with info.
-        Pageable pageable = PageRequest.of(page, size);
+    public Page<DogDTO> findDogsByColor(String color, Pageable pageable) {
         log.debug("SERVICE: fetching all dogs with color: {}", color);
         Page<Dog> dogs = repository.findByColorContainingIgnoreCase(color, pageable);
         log.debug("SERVICE: successfully fetched all dogs with color: {}", color);
