@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -51,22 +54,16 @@ public class DogController {
 
     @GetMapping
     public ResponseEntity<?> findAllDogs(
-            @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "id") String sortBy,
-            @RequestParam(defaultValue = "asc") String direction) {
-        if (page < 0) {
-            return ResponseEntity.badRequest().body("Page number must ≥ 0");
-        }
+            @PageableDefault(page = 0, size = PAGE_SIZE, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
         log.info("REST request finding all dogs");
-        Page<DogDTO> allDogs = service.getAllDogs(page, PAGE_SIZE, sortBy, direction);
+        Page<DogDTO> allDogs = service.getAllDogs(pageable);
 
-
-        //--- Response Custom Structure.
+        // --- Response Custom Structure.
         Map<String, Object> response = new HashMap<>();
         response.put("content", allDogs.getContent());
         response.put("currentPage", allDogs.getNumber());
         response.put("totalItems", allDogs.getTotalElements());
-        response.put("pageSize", PAGE_SIZE);
+        response.put("pageSize", allDogs.getSize());
         response.put("hasNext", allDogs.hasNext());
         response.put("hasPrevious", allDogs.hasPrevious());
         return ResponseEntity.status(HttpStatus.OK).body(response);
@@ -74,19 +71,16 @@ public class DogController {
 
     @GetMapping("/search")
     public ResponseEntity<?> findDogsByName(
-        @RequestParam(name = "name") String name,
-        @RequestParam(defaultValue = "0") int page) {
-        if (page < 0) {
-            return ResponseEntity.badRequest().body("Page number must ≥ 0");
-        }
+            @RequestParam(name = "name") String name,
+            @PageableDefault(page = 0, size = PAGE_SIZE, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
         log.info("REST request finding all dogs by name: {}", name);
-        Page<DogDTO> allDogsByName = service.findDogsByName(name, page, PAGE_SIZE);
-        //--- Response Custom Structure.
+        Page<DogDTO> allDogsByName = service.findDogsByName(name, pageable);
+        // --- Response Custom Structure.
         Map<String, Object> response = new HashMap<>();
         response.put("content", allDogsByName.getContent());
         response.put("currentPage", allDogsByName.getNumber());
         response.put("totalItems", allDogsByName.getTotalElements());
-        response.put("pageSize", PAGE_SIZE);
+        response.put("pageSize", allDogsByName.getSize());
         response.put("hasNext", allDogsByName.hasNext());
         response.put("hasPrevious", allDogsByName.hasPrevious());
         return ResponseEntity.status(HttpStatus.OK).body(response);
@@ -94,19 +88,16 @@ public class DogController {
 
     @GetMapping("/color")
     public ResponseEntity<?> findDogsByColor(
-        @RequestParam(name = "color") String color,
-        @RequestParam(defaultValue = "0") int page) {
-        if (page < 0) {
-            return ResponseEntity.badRequest().body("Page number must ≥ 0");
-        }
+            @RequestParam(name = "color") String color,
+            @PageableDefault(page = 0, size = PAGE_SIZE, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
         log.info("REST request finding all dogs by color: {}", color);
-        Page<DogDTO> allDogsByColor = service.findDogsByColor(color, page, PAGE_SIZE);
-        //--- Response Custom Structure.
+        Page<DogDTO> allDogsByColor = service.findDogsByColor(color, pageable);
+        // --- Response Custom Structure.
         Map<String, Object> response = new HashMap<>();
         response.put("content", allDogsByColor.getContent());
         response.put("currentPage", allDogsByColor.getNumber());
         response.put("totalItems", allDogsByColor.getTotalElements());
-        response.put("pageSize", PAGE_SIZE);
+        response.put("pageSize", allDogsByColor.getSize());
         response.put("hasNext", allDogsByColor.hasNext());
         response.put("hasPrevious", allDogsByColor.hasPrevious());
         return ResponseEntity.status(HttpStatus.OK).body(response);
