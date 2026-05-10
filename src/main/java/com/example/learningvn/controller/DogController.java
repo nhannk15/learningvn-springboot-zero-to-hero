@@ -1,5 +1,8 @@
 package com.example.learningvn.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -56,7 +59,17 @@ public class DogController {
         }
         log.info("REST request finding all dogs");
         Page<DogDTO> allDogs = service.getAllDogs(page, PAGE_SIZE, sortBy, direction);
-        return ResponseEntity.status(HttpStatus.OK).body(allDogs);
+
+
+        //--- Response Custom Structure.
+        Map<String, Object> response = new HashMap<>();
+        response.put("content", allDogs.getContent());
+        response.put("currentPage", allDogs.getNumber());
+        response.put("totalItems", allDogs.getTotalElements());
+        response.put("pageSize", PAGE_SIZE);
+        response.put("hasNext", allDogs.hasNext());
+        response.put("hasPrevious", allDogs.hasPrevious());
+        return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
     @GetMapping("/search")
@@ -68,7 +81,15 @@ public class DogController {
         }
         log.info("REST request finding all dogs by name: {}", name);
         Page<DogDTO> allDogsByName = service.findDogsByName(name, page, PAGE_SIZE);
-        return ResponseEntity.status(HttpStatus.OK).body(allDogsByName);
+        //--- Response Custom Structure.
+        Map<String, Object> response = new HashMap<>();
+        response.put("content", allDogsByName.getContent());
+        response.put("currentPage", allDogsByName.getNumber());
+        response.put("totalItems", allDogsByName.getTotalElements());
+        response.put("pageSize", PAGE_SIZE);
+        response.put("hasNext", allDogsByName.hasNext());
+        response.put("hasPrevious", allDogsByName.hasPrevious());
+        return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
     @GetMapping("/color")
@@ -80,7 +101,15 @@ public class DogController {
         }
         log.info("REST request finding all dogs by color: {}", color);
         Page<DogDTO> allDogsByColor = service.findDogsByColor(color, page, PAGE_SIZE);
-        return ResponseEntity.status(HttpStatus.OK).body(allDogsByColor);
+        //--- Response Custom Structure.
+        Map<String, Object> response = new HashMap<>();
+        response.put("content", allDogsByColor.getContent());
+        response.put("currentPage", allDogsByColor.getNumber());
+        response.put("totalItems", allDogsByColor.getTotalElements());
+        response.put("pageSize", PAGE_SIZE);
+        response.put("hasNext", allDogsByColor.hasNext());
+        response.put("hasPrevious", allDogsByColor.hasPrevious());
+        return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
     @PatchMapping("/{dogId}")
