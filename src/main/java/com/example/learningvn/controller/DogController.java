@@ -1,9 +1,9 @@
 package com.example.learningvn.controller;
 
-import java.util.List;
-
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -45,23 +45,33 @@ public class DogController {
     }
 
     @GetMapping
-    public ResponseEntity<?> findAllDogs() {
+    public ResponseEntity<?> findAllDogs(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "5") int size,
+            @RequestParam(defaultValue = "id") String sortBy,
+            @RequestParam(defaultValue = "asc") String direction) {
         log.info("REST request finding all dogs");
-        List<DogDTO> allDogs = service.getAllDogs();
+        Page<DogDTO> allDogs = service.getAllDogs(page, size, sortBy, direction);
         return ResponseEntity.status(HttpStatus.OK).body(allDogs);
     }
 
     @GetMapping("/search")
-    public ResponseEntity<?> findDogsByName(@RequestParam(name = "name") String name) {
+    public ResponseEntity<?> findDogsByName(
+        @RequestParam(name = "name") String name,
+        @RequestParam(defaultValue = "0") int page,
+        @RequestParam(defaultValue = "5") int size) {
         log.info("REST request finding all dogs by name: {}", name);
-        List<DogDTO> allDogsByName = service.findDogsByName(name);
+        Page<DogDTO> allDogsByName = service.findDogsByName(name, page, size);
         return ResponseEntity.status(HttpStatus.OK).body(allDogsByName);
     }
 
     @GetMapping("/color")
-    public ResponseEntity<?> findDogsByColor(@RequestParam(name = "color") String color) {
+    public ResponseEntity<?> findDogsByColor(
+        @RequestParam(name = "color") String color,
+        @RequestParam(defaultValue = "0") int page,
+        @RequestParam(defaultValue = "5") int size) {
         log.info("REST request finding all dogs by color: {}", color);
-        List<DogDTO> allDogsByColor = service.findDogsByColor(color);
+        Page<DogDTO> allDogsByColor = service.findDogsByColor(color, page, size);
         return ResponseEntity.status(HttpStatus.OK).body(allDogsByColor);
     }
 
