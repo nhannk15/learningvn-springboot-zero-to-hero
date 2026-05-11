@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import com.example.learningvn.exception.UserEmailDuplicatedException;
 import com.example.learningvn.exception.UserNotFoundException;
@@ -19,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
-@Transactional(readOnly = true)
+@Transactional(readOnly = true, isolation = Isolation.DEFAULT)
 public class UserServiceImpl implements UserService {
 
     private final UserRepository repository;
@@ -33,7 +34,9 @@ public class UserServiceImpl implements UserService {
 
     @Transactional(
         propagation = Propagation.REQUIRED,
-        rollbackFor = Exception.class
+        rollbackFor = Exception.class, //--- All Exception will trigger ROLLBACK.
+        isolation = Isolation.READ_COMMITTED, //--- Avoid Dirty Reading when creating users.
+        timeout = 10
     )
     @Override
     public UserDTO createUser(User userDetails) {
@@ -53,6 +56,8 @@ public class UserServiceImpl implements UserService {
         User user = repository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("User not foudn with id: " + id));
         log.debug("SERVICE: user found: {}", id);
+        log.debug("Transaction active: {}", TransactionSynchronizationManager.isActualTransactionActive());
+        log.debug("Transaction name: {}", TransactionSynchronizationManager.getCurrentTransactionName());
         return mapper.toDTO(user);
     }
 
@@ -66,7 +71,9 @@ public class UserServiceImpl implements UserService {
 
     @Transactional(
         propagation = Propagation.REQUIRED,
-        rollbackFor = Exception.class
+        rollbackFor = Exception.class,
+        timeout = 10,
+        isolation = Isolation.REPEATABLE_READ //--- Assure that the data isn't changed while updating.
     )
     @Override
     public UserDTO updateUser(Long id, UserDTO userDetails) {
@@ -86,7 +93,8 @@ public class UserServiceImpl implements UserService {
 
     @Transactional(
         propagation = Propagation.REQUIRED,
-        rollbackFor = Exception.class
+        rollbackFor = Exception.class,
+        timeout = 10
     )
     @Override
     public void deleteUser(Long id) {
