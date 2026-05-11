@@ -14,6 +14,7 @@ import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
@@ -31,10 +32,12 @@ public class User {
 
     @Column(name = "email", columnDefinition = "VARCHAR(100)", nullable = false, unique = true)
     @Email(message = "Email wrong format")
+    @NotNull(message = "Email must not be left blank")
     private String email;
 
     @Column(name = "password", columnDefinition = "VARCHAR(100)", nullable = false)
     @Size(min = 8, message = "Password length must be greater than 8")
+    @NotNull(message = "Password must not be left blank")
     private String password;
 
     @Column(name = "date_created")
