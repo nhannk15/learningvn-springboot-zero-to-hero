@@ -4,6 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.learningvn.exception.UserEmailDuplicatedException;
 import com.example.learningvn.exception.UserNotFoundException;
@@ -16,6 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
+@Transactional(readOnly = true)
 public class UserServiceImpl implements UserService {
 
     private final UserRepository repository;
@@ -27,6 +31,10 @@ public class UserServiceImpl implements UserService {
         this.mapper = mapper;
     }
 
+    @Transactional(
+        propagation = Propagation.REQUIRED,
+        rollbackFor = Exception.class
+    )
     @Override
     public UserDTO createUser(User userDetails) {
         log.debug("SERVICE: adding user: {}", userDetails.getUsername());
@@ -38,7 +46,7 @@ public class UserServiceImpl implements UserService {
         log.debug("SERVICE: successfully created user: {}", createdUser.getUsername());
         return mapper.toDTO(createdUser);
     }
-
+    
     @Override
     public UserDTO findById(Long id) {
         log.debug("SERVICE: finding user: {}", id);
@@ -56,6 +64,10 @@ public class UserServiceImpl implements UserService {
         return mapper.toDTOList(users);
     }
 
+    @Transactional(
+        propagation = Propagation.REQUIRED,
+        rollbackFor = Exception.class
+    )
     @Override
     public UserDTO updateUser(Long id, UserDTO userDetails) {
         log.debug("SERVICE: updating user with id: {}", id);
@@ -72,6 +84,10 @@ public class UserServiceImpl implements UserService {
         return mapper.toDTO(updatedUser);
     }
 
+    @Transactional(
+        propagation = Propagation.REQUIRED,
+        rollbackFor = Exception.class
+    )
     @Override
     public void deleteUser(Long id) {
         log.debug("SERVICE: deleting user with id: {}", id);
