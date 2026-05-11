@@ -11,6 +11,7 @@ import org.springframework.context.event.EventListener;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.example.learningvn.model.entity.Dog;
 //import com.example.learningvn.model.entity.User;
@@ -19,6 +20,7 @@ import com.example.learningvn.repository.DogRepository;
 //import com.example.learningvn.repository.ProductRepository;
 //import com.example.learningvn.repository.UserRepository;
 
+@EnableTransactionManagement
 @SpringBootApplication
 public class LearningvnApplication {
 

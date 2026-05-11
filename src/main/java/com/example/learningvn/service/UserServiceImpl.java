@@ -4,6 +4,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 
 import com.example.learningvn.exception.UserEmailDuplicatedException;
 import com.example.learningvn.exception.UserNotFoundException;
@@ -16,6 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
+@Transactional(readOnly = true, isolation = Isolation.DEFAULT)
 public class UserServiceImpl implements UserService {
 
     private final UserRepository repository;
@@ -27,6 +32,12 @@ public class UserServiceImpl implements UserService {
         this.mapper = mapper;
     }
 
+    @Transactional(
+        propagation = Propagation.REQUIRED,
+        rollbackFor = Exception.class, //--- All Exception will trigger ROLLBACK.
+        isolation = Isolation.READ_COMMITTED, //--- Avoid Dirty Reading when creating users.
+        timeout = 10
+    )
     @Override
     public UserDTO createUser(User userDetails) {
         log.debug("SERVICE: adding user: {}", userDetails.getUsername());
@@ -38,13 +49,15 @@ public class UserServiceImpl implements UserService {
         log.debug("SERVICE: successfully created user: {}", createdUser.getUsername());
         return mapper.toDTO(createdUser);
     }
-
+    
     @Override
     public UserDTO findById(Long id) {
         log.debug("SERVICE: finding user: {}", id);
         User user = repository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException("User not foudn with id: " + id));
         log.debug("SERVICE: user found: {}", id);
+        log.debug("Transaction active: {}", TransactionSynchronizationManager.isActualTransactionActive());
+        log.debug("Transaction name: {}", TransactionSynchronizationManager.getCurrentTransactionName());
         return mapper.toDTO(user);
     }
 
@@ -56,6 +69,12 @@ public class UserServiceImpl implements UserService {
         return mapper.toDTOList(users);
     }
 
+    @Transactional(
+        propagation = Propagation.REQUIRED,
+        rollbackFor = Exception.class,
+        timeout = 10,
+        isolation = Isolation.REPEATABLE_READ //--- Assure that the data isn't changed while updating.
+    )
     @Override
     public UserDTO updateUser(Long id, UserDTO userDetails) {
         log.debug("SERVICE: updating user with id: {}", id);
@@ -72,6 +91,11 @@ public class UserServiceImpl implements UserService {
         return mapper.toDTO(updatedUser);
     }
 
+    @Transactional(
+        propagation = Propagation.REQUIRED,
+        rollbackFor = Exception.class,
+        timeout = 10
+    )
     @Override
     public void deleteUser(Long id) {
         log.debug("SERVICE: deleting user with id: {}", id);
