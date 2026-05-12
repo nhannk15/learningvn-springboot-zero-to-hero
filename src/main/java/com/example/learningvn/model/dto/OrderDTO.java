@@ -24,14 +24,6 @@ public class OrderDTO {
         this.orderNumber = orderNumber;
     }
 
-    public Double gettotalAmount() {
-        return totalAmount;
-    }
-
-    public void settotalAmount(Double totalAmount) {
-        this.totalAmount = totalAmount;
-    }
-
     public String getStatus() {
         return status;
     }
@@ -52,6 +44,14 @@ public class OrderDTO {
     public String toString() {
         return "OrderDTO [orderNumber=" + orderNumber + ", totalAmount=" + totalAmount + ", status=" + status
                 + ", username=" + username + "]";
+    }
+
+    public Double getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(Double totalAmount) {
+        this.totalAmount = totalAmount;
     }
 
 }

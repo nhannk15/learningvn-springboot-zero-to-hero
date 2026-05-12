@@ -3,6 +3,8 @@ package com.example.learningvn.model.entity;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.example.learningvn.annotation.StrongPassword;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -38,6 +40,7 @@ public class User {
     @Column(name = "password", columnDefinition = "VARCHAR(100)", nullable = false)
     @Size(min = 8, message = "Password length must be greater than 8")
     @NotNull(message = "Password must not be left blank")
+    @StrongPassword
     private String password;
 
     @Column(name = "date_created")
