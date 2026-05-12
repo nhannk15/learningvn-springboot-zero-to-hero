@@ -21,6 +21,7 @@ import com.example.learningvn.model.entity.User;
 import com.example.learningvn.service.UserService;
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.Size;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -77,5 +78,11 @@ public class UserController {
         log.info("REST request deleting user with id: {}", id);
         service.deleteUser(id);
         return ResponseEntity.ok().body(null);
+    }
+
+    //--- Test Validation For User Entity.
+    @GetMapping("/test")
+    public ResponseEntity<?> testValidation(@RequestParam @Size(min = 3, max = 10) String name) {
+        return ResponseEntity.ok().body("Valid name: " + name);
     }
 }
