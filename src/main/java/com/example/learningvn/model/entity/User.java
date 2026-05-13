@@ -1,6 +1,7 @@
 package com.example.learningvn.model.entity;
 
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.List;
 
 import com.example.learningvn.annotation.StrongPassword;
@@ -11,6 +12,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
@@ -52,7 +56,9 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Order> orders;
 
-    private String role;
+    @ManyToMany
+    @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Collection<Role> roles;
 
     private boolean enable = true;
 
@@ -68,30 +74,6 @@ public class User {
     }
 
     public User() {
-    }
-
-    public User(@Size(min = 5, max = 100, message = "Username must be between 5 - 100 characters") String username,
-            @Email(message = "Email wrong format") @NotNull(message = "Email must not be left blank") String email,
-            @Size(min = 8, message = "Password length must be greater than 8") @NotNull(message = "Password must not be left blank") String password,
-            LocalDateTime dateCreated, LocalDateTime dateUpdated, List<Order> orders, String role, boolean enable) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.dateCreated = dateCreated;
-        this.dateUpdated = dateUpdated;
-        this.orders = orders;
-        this.role = role;
-        this.enable = enable;
-    }
-
-    public User(@Size(min = 5, max = 100, message = "Username must be between 5 - 100 characters") String username,
-            @Email(message = "Email wrong format") @NotNull(message = "Email must not be left blank") String email,
-            @Size(min = 8, message = "Password length must be greater than 8") @NotNull(message = "Password must not be left blank") String password,
-            String role) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.role = role;
     }
 
     public User(@Size(min = 5, max = 100, message = "Username must be between 5 - 100 characters") String username,
@@ -172,12 +154,20 @@ public class User {
                 + ", dateCreated=" + dateCreated + ", dateUpdated=" + dateUpdated + "]";
     }
 
-    public String getRole() {
-        return role;
+    public List<Order> getOrders() {
+        return orders;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+
+    public Collection<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Collection<Role> roles) {
+        this.roles = roles;
     }
 
     public boolean isEnable() {

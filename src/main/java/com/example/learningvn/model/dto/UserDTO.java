@@ -1,5 +1,9 @@
 package com.example.learningvn.model.dto;
 
+import java.util.Collection;
+
+import com.example.learningvn.model.entity.Role;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -13,17 +17,18 @@ public class UserDTO {
     @NotBlank
     private String email;
 
-    private String role;
+    private Collection<Role> roles;
 
     private boolean enable;
 
     public UserDTO() {
     }
 
-    public UserDTO(String username, String email, String role, boolean enable) {
+    public UserDTO(@Size(min = 5, max = 100, message = "Username must be betweem 5 - 100 characters") String username,
+            @Email(message = "Email wrong format") @NotBlank String email, Collection<Role> roles, boolean enable) {
         this.username = username;
         this.email = email;
-        this.role = role;
+        this.roles = roles;
         this.enable = enable;
     }
 
@@ -43,12 +48,12 @@ public class UserDTO {
         this.email = email;
     }
 
-    public String getRole() {
-        return role;
+    public Collection<Role> getRoles() {
+        return roles;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRoles(Collection<Role> roles) {
+        this.roles = roles;
     }
 
     public boolean isEnable() {
@@ -59,9 +64,6 @@ public class UserDTO {
         this.enable = enable;
     }
 
-    @Override
-    public String toString() {
-        return "UserDTO [username=" + username + ", email=" + email + "]";
-    }
+    
 
 }

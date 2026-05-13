@@ -1,7 +1,6 @@
 package com.example.learningvn.detailsservice;
 
 import java.util.Collections;
-import java.util.List;
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -35,7 +34,7 @@ public class DatabaseUserDetailsService implements UserDetailsService {
         return org.springframework.security.core.userdetails.User
         .withUsername(user.getUsername())
         .password(user.getPassword())
-        .authorities(Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole())))
+        //.authorities(Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole())))
         .accountExpired(false)
         .accountLocked(false)
         .credentialsExpired(false)
