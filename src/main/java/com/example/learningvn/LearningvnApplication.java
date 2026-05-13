@@ -8,9 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.server.context.WebServerInitializedEvent;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.event.EventListener;
-import org.springframework.security.config.Customizer;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.web.SecurityFilterChain;
+//import org.springframework.security.config.Customizer;
+//import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+//import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.example.learningvn.model.entity.Dog;
@@ -23,15 +23,6 @@ import com.example.learningvn.repository.DogRepository;
 @EnableTransactionManagement
 @SpringBootApplication
 public class LearningvnApplication {
-
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.authorizeHttpRequests(configurer -> configurer.anyRequest().permitAll());
-        httpSecurity.httpBasic(Customizer.withDefaults());
-        httpSecurity.csrf(csrf -> csrf.disable());
-        httpSecurity.headers(headers -> headers.frameOptions(frame -> frame.disable()));
-        return httpSecurity.build();
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(LearningvnApplication.class, args);
