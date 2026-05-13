@@ -3,6 +3,7 @@ package com.example.learningvn.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
@@ -23,13 +24,15 @@ import lombok.extern.slf4j.Slf4j;
 @Transactional(readOnly = true, isolation = Isolation.DEFAULT)
 public class UserServiceImpl implements UserService {
 
+    private final PasswordEncoder encoder;
     private final UserRepository repository;
     private final UserMapper mapper;
 
     @Autowired
-    public UserServiceImpl(UserRepository repository, UserMapper mapper) {
+    public UserServiceImpl(UserRepository repository, UserMapper mapper, PasswordEncoder encoder) {
         this.repository = repository;
         this.mapper = mapper;
+        this.encoder = encoder;
     }
 
     @Transactional(
@@ -45,6 +48,10 @@ public class UserServiceImpl implements UserService {
             log.warn("SERVICE: email duplicated");
             throw new UserEmailDuplicatedException("Duplicated email: " + userDetails.getEmail());
         }
+
+        String encodedPassword = encoder.encode(userDetails.getPassword());
+        userDetails.setPassword(encodedPassword);
+
         User createdUser = repository.save(userDetails);
         log.debug("SERVICE: successfully created user: {}", createdUser.getUsername());
         return mapper.toDTO(createdUser);
