@@ -1,7 +1,8 @@
 package com.example.learningvn.detailsservice;
 
-import java.util.Collections;
+import java.util.stream.Collectors;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -12,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.example.learningvn.model.entity.User;
 import com.example.learningvn.repository.UserRepository;
 
+@Primary
 @Service
 public class DatabaseUserDetailsService implements UserDetailsService {
     private final UserRepository repository;
@@ -32,14 +34,16 @@ public class DatabaseUserDetailsService implements UserDetailsService {
             throw new UsernameNotFoundException("User account is diabled");
         }
         return org.springframework.security.core.userdetails.User
-        .withUsername(user.getUsername())
-        .password(user.getPassword())
-        //.authorities(Collections.singletonList(new SimpleGrantedAuthority("ROLE_" + user.getRole())))
-        .accountExpired(false)
-        .accountLocked(false)
-        .credentialsExpired(false)
-        .disabled(!user.isEnable())
-        .build();
+                .withUsername(user.getUsername())
+                .password(user.getPassword())
+                .authorities(user.getRoles().stream()
+                        .map(role -> new SimpleGrantedAuthority(role.getName()))
+                        .collect(Collectors.toList()))
+                .accountExpired(false)
+                .accountLocked(false)
+                .credentialsExpired(false)
+                .disabled(!user.isEnable())
+                .build();
     }
 
 }
